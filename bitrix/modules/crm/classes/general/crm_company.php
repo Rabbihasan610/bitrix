@@ -20,6 +20,7 @@ use Bitrix\Crm\Tracking;
 use Bitrix\Crm\UtmTable;
 use Bitrix\Main;
 use Bitrix\Main\Text\HtmlFilter;
+use Bitrix\Main\Loader;
 
 class CAllCrmCompany
 {
@@ -1660,7 +1661,49 @@ class CAllCrmCompany
 			);
 		}
 
+		self::createSharedFolder($arFields);
+
 		return $result;
+	}
+
+	public function createSharedFolder($arFields)
+	{
+		if(!Loader::includeModule('disk'))
+		{
+			return null;
+		}
+
+		// create shared folder for company when new company created
+
+		$storageTypeID = \Bitrix\Crm\Integration\StorageType::getDefaultTypeID();
+		$storageType = \Bitrix\Crm\Integration\StorageType::getTypeName($storageTypeID);
+
+		$folderName = \Bitrix\Crm\Integration\StorageManager::getFolderName(
+			$storageTypeID,
+			$arFields['TITLE'],
+			$arFields['ID']
+		);
+
+		$folder = \Bitrix\Disk\Folder::add([
+			'NAME' => $folderName,
+			'CREATED_BY' => $arFields['CREATED_BY_ID'],
+			'TYPE' => \Bitrix\Disk\FolderTable::TYPE_SHARED,
+			'STORAGE_ID' => $storageTypeID,
+			'PARENT_ID' => $storageType === 'user'? $arFields['CREATED_BY_ID'] : $arFields['ASSIGNED_BY_ID'],
+			'SITE_ID' => SITE_ID,
+			'DELETE_TIME' => null,
+			'CREATED_BY' => $arFields['CREATED_BY_ID'],
+			'UPDATED_BY' => $arFields['CREATED_BY_ID'],
+		], true);
+
+
+		if(!$folder)
+		{
+			return null;
+		}
+
+		return $folder;
+
 	}
 
 	protected function createPullItem(array $data = []): array
