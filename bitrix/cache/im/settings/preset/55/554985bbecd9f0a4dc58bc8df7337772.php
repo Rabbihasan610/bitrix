@@ -1,0 +1,7 @@
+<?
+if($INCLUDE_FROM_CACHE!='Y')return false;
+$datecreate = '001699259540';
+$dateexpire = '001730795540';
+$ser_content = 'a:2:{s:7:"CONTENT";s:0:"";s:4:"VARS";a:4:{s:2:"id";s:1:"2";s:4:"name";s:8:"Personal";s:4:"sort";s:7:"1000000";s:7:"general";a:41:{s:6:"status";s:6:"online";s:15:"backgroundImage";b:0;s:9:"bxdNotify";b:1;s:9:"sshNotify";b:1;s:13:"generalNotify";b:1;s:11:"trackStatus";s:0:"";s:12:"nativeNotify";b:1;s:20:"openDesktopFromPanel";b:1;s:11:"viewOffline";b:1;s:9:"viewGroup";b:1;s:15:"viewLastMessage";b:1;s:12:"viewBirthday";b:1;s:15:"viewCommonUsers";b:1;s:11:"enableSound";s:1:"1";s:14:"enableBigSmile";b:1;s:15:"enableDarkTheme";s:4:"auto";s:18:"isCurrentThemeDark";b:1;s:14:"enableRichLink";b:1;s:14:"linesTabEnable";b:1;s:19:"linesNewGroupEnable";b:0;s:11:"sendByEnter";b:1;s:11:"correctText";b:0;s:23:"panelPositionHorizontal";s:5:"right";s:21:"panelPositionVertical";s:6:"bottom";s:15:"loadLastMessage";b:1;s:14:"loadLastNotify";b:1;s:14:"notifyAutoRead";b:1;s:12:"notifyScheme";s:6:"simple";s:17:"notifySchemeLevel";s:9:"important";s:20:"notifySchemeSendSite";b:1;s:21:"notifySchemeSendEmail";b:1;s:20:"notifySchemeSendXmpp";b:1;s:20:"notifySchemeSendPush";b:1;s:14:"privacyMessage";s:3:"all";s:11:"privacyChat";s:3:"all";s:11:"privacyCall";s:3:"all";s:13:"privacySearch";s:3:"all";s:14:"privacyProfile";s:3:"all";s:23:"callAcceptIncomingVideo";s:8:"AllowAll";s:17:"backgroundImageId";s:1:"1";s:4:"next";b:0;}}}';
+return true;
+?>

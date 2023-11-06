@@ -1,0 +1,1 @@
+<?php $filesInfo = ["/bitrix/js/main/spotlight/css/spotlight.css" => "16992579454391",]; ?>
