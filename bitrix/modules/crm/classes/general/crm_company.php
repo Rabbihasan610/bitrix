@@ -1675,14 +1675,6 @@ class CAllCrmCompany
 
 		// create new folder 
 
-		$folder = \Bitrix\Disk\Folder::add(array(
-			'NAME' => $arFields['TITLE'],
-			'CREATED_BY' => $arFields['ASSIGNED_BY_ID'],
-			'PARENT_ID' => \Bitrix\Crm\Integration\DiskManager::getCompanyFolderId(),
-			'DELETE_ON_BIZPROC' => 'Y',
-			'STORAGE_ID' => \Bitrix\Crm\Integration\DiskManager::getStorageId(),
-		), true);
-
 	}
 
 	protected function createPullItem(array $data = []): array
