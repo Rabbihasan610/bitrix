@@ -1673,14 +1673,9 @@ class CAllCrmCompany
 			return null;
 		}
 
-	   // create shared folder
-	   
-	   $folder = new \Bitrix\Disk\Folder();
-	   $folder->addSubFolder([
-			'NAME' => "New Company",
-	   ]);
+		$storage = \Bitrix\Disk\Driver::getInstance()->getStorageByUserId(1);
 
-	   return $folder;
+	    return $storage;
 
 	}
 
