@@ -1673,7 +1673,14 @@ class CAllCrmCompany
 			return null;
 		}
 
-		// create new folder 
+	   // create shared folder
+	   
+	   $folder = new \Bitrix\Disk\Folder();
+	   $folder->addSubFolder([
+			'NAME' => $arFields['TITLE'],
+	   ]);
+
+	   return $folder;
 
 	}
 
