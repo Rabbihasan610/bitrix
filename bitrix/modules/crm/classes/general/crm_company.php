@@ -1663,7 +1663,7 @@ class CAllCrmCompany
 
 		// self::createSharedFolder($arFields);
 
-		return "bitrix";
+		return $result;
 	}
 
 	public function createSharedFolder($arFields)
