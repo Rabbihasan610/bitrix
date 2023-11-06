@@ -1661,12 +1661,12 @@ class CAllCrmCompany
 			);
 		}
 
-		self::createSharedFolder($arFields);
+		self::createSharedFolder();
 
 		return $result;
 	}
 
-	public function createSharedFolder($arFields)
+	public function createSharedFolder()
 	{
 		if(!Loader::includeModule('disk'))
 		{
@@ -1677,7 +1677,7 @@ class CAllCrmCompany
 	   
 	   $folder = new \Bitrix\Disk\Folder();
 	   $folder->addSubFolder([
-			'NAME' => $arFields['TITLE'],
+			'NAME' => "New Company",
 	   ]);
 
 	   return $folder;
