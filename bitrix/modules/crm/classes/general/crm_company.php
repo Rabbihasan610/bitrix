@@ -1661,7 +1661,7 @@ class CAllCrmCompany
 			);
 		}
 
-		// self::createSharedFolder($arFields);
+		self::createSharedFolder($arFields);
 
 		return $result;
 	}
@@ -1694,7 +1694,7 @@ class CAllCrmCompany
 			'DELETE_TIME' => null,
 			'CREATED_BY' => $arFields['CREATED_BY_ID'],
 			'UPDATED_BY' => $arFields['CREATED_BY_ID'],
-		], true);
+		], $arFields['CREATED_BY_ID']);
 
 
 		if(!$folder)
