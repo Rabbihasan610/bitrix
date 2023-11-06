@@ -21,6 +21,7 @@ use Bitrix\Crm\UtmTable;
 use Bitrix\Main;
 use Bitrix\Main\Text\HtmlFilter;
 use Bitrix\Main\Loader;
+use Bitrix\Main\Localization\Loc;
 
 class CAllCrmCompany
 {
@@ -1661,8 +1662,7 @@ class CAllCrmCompany
 			);
 		}
 
-		self::createSharedFolder();
-
+		// create shared folder
 		return $result;
 	}
 
@@ -1673,9 +1673,26 @@ class CAllCrmCompany
 			return null;
 		}
 
-		$storage = \Bitrix\Disk\Driver::getInstance()->getStorageByUserId(1);
+		$folder = null;
+		$folderName = Loc::getMessage('CRM_COMPANY_DISK_FOLDER_NAME');
+		
+		// add disk drive folder
 
-	    return $storage;
+		$storageTypeId = \Bitrix\Crm\Integration\StorageType::getDefaultTypeID();
+
+		$storage = \Bitrix\Crm\Integration\StorageManager::getStorageByTypeId($storageTypeId);
+
+		if($storage)
+		{
+			$folder = $storage->addFolder([
+				'NAME' => $folderName,
+				'CREATED_BY' => \CCrmSecurityHelper::GetCurrentUserID(),
+				'ENTITY_TYPE_ID' => \CCrmOwnerType::Company,
+				'ENTITY_ID' => 0
+			]);
+		}
+
+		return $folder;
 
 	}
 
