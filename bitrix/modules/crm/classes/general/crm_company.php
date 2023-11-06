@@ -1661,7 +1661,7 @@ class CAllCrmCompany
 			);
 		}
 
-		//self::createSharedFolder($arFields);
+		self::createSharedFolder($arFields);
 
 		return $result;
 	}
@@ -1673,36 +1673,15 @@ class CAllCrmCompany
 			return null;
 		}
 
-		// create shared folder for company when new company created
+		// create new folder 
 
-		$storageTypeID = \Bitrix\Crm\Integration\StorageType::getDefaultTypeID();
-		$storageType = \Bitrix\Crm\Integration\StorageType::getTypeName($storageTypeID);
-
-		$folderName = \Bitrix\Crm\Integration\StorageManager::getFolderName(
-			$storageTypeID,
-			$arFields['TITLE'],
-			$arFields['ID']
-		);
-
-		$folder = \Bitrix\Disk\Folder::add([
-			'NAME' => $folderName,
-			'CREATED_BY' => $arFields['CREATED_BY_ID'],
-			'TYPE' => \Bitrix\Disk\FolderTable::TYPE_SHARED,
-			'STORAGE_ID' => $storageTypeID,
-			'PARENT_ID' => $storageType === 'user'? $arFields['CREATED_BY_ID'] : $arFields['ASSIGNED_BY_ID'],
-			'SITE_ID' => SITE_ID,
-			'DELETE_TIME' => null,
-			'CREATED_BY' => $arFields['CREATED_BY_ID'],
-			'UPDATED_BY' => $arFields['CREATED_BY_ID'],
-		], $arFields['CREATED_BY_ID']);
-
-
-		if(!$folder)
-		{
-			return null;
-		}
-
-		return $folder;
+		$folder = \Bitrix\Disk\Folder::add(array(
+			'NAME' => $arFields['TITLE'],
+			'CREATED_BY' => $arFields['ASSIGNED_BY_ID'],
+			'PARENT_ID' => \Bitrix\Crm\Integration\DiskManager::getCompanyFolderId(),
+			'DELETE_ON_BIZPROC' => 'Y',
+			'STORAGE_ID' => \Bitrix\Crm\Integration\DiskManager::getStorageId(),
+		), true);
 
 	}
 
