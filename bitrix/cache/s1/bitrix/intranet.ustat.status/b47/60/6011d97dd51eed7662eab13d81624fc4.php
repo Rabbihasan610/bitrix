@@ -1,8 +1,8 @@
 <?
 if($INCLUDE_FROM_CACHE!='Y')return false;
-$datecreate = '001699259540';
-$dateexpire = '001699260140';
-$ser_content = 'a:2:{s:7:"CONTENT";s:0:"";s:4:"VARS";a:2:{s:8:"arResult";a:1:{s:11:"STATUS_INFO";a:2:{s:8:"ACTIVITY";i:0;s:11:"INVOLVEMENT";i:0;}}s:18:"templateCachedData";a:2:{s:9:"frameMode";b:1;s:6:"__view";a:1:{s:7:"sidebar";a:1:{i:0;a:2:{i:0;s:16542:"
+$datecreate = '001699347053';
+$dateexpire = '001699347653';
+$ser_content = 'a:2:{s:7:"CONTENT";s:0:"";s:4:"VARS";a:2:{s:8:"arResult";a:1:{s:11:"STATUS_INFO";a:2:{s:8:"ACTIVITY";d:2;s:11:"INVOLVEMENT";i:100;}}s:18:"templateCachedData";a:2:{s:9:"frameMode";b:1;s:6:"__view";a:1:{s:7:"sidebar";a:1:{i:0;a:2:{i:0;s:16544:"
 <script type="text/javascript">
 
 BX.INTRANET_USTAT_LAST_PARAMETERS = null;
@@ -283,9 +283,9 @@ BX.ready(function() {
 		</div>
 		<div class="sidebar-pulse-cell-r">
 			<div class="sidebar-pulse-nums">
-				<div class="sidebar-pulse-counter" title="Current company activity level (composite of all users in the last hour)"><span id="pulse-cnt"></span>0<div class="sidebar-pulse-counter-line"></div>
+				<div class="sidebar-pulse-counter" title="Current company activity level (composite of all users in the last hour)"><span id="pulse-cnt"></span>2<div class="sidebar-pulse-counter-line"></div>
 				</div>
-				<div class="sidebar-pulse-percent" title="Current engagement of users. This shows the percentage of all users today who have used at least four different tools in the intranet."><span id="pulse-rate"></span>0<span class="sidebar-pulse-percent-icon">%</span><div class="sidebar-pulse-percent-bg"></div>
+				<div class="sidebar-pulse-percent" title="Current engagement of users. This shows the percentage of all users today who have used at least four different tools in the intranet."><span id="pulse-rate"></span>100<span class="sidebar-pulse-percent-icon">%</span><div class="sidebar-pulse-percent-bg"></div>
 				</div>
 			</div>
 		</div>

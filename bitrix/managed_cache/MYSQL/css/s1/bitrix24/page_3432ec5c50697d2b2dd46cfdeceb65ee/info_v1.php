@@ -1,0 +1,1 @@
+<?php $filesInfo = ["/bitrix/components/bitrix/ui.sidepanel.wrapper/templates/.default/template.css" => "16992580966956","/bitrix/components/bitrix/bizproc.globalfield.edit/templates/.default/style.css" => "1699257952136","/bitrix/components/bitrix/ui.button.panel/templates/.default/style.css" => "1699258096638",]; ?>

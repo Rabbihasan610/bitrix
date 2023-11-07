@@ -1,7 +1,7 @@
 <?
 if($INCLUDE_FROM_CACHE!='Y')return false;
-$datecreate = '001699259461';
-$dateexpire = '001699263061';
-$ser_content = 'a:2:{s:7:"CONTENT";s:0:"";s:4:"VARS";a:1:{s:1:"-";a:1:{s:51:"Bitrix\\Crm\\Integration\\Catalog\\Contractor\\Converter";s:6:"a:0:{}";}}}';
+$datecreate = '001699350119';
+$dateexpire = '001699353719';
+$ser_content = 'a:2:{s:7:"CONTENT";s:0:"";s:4:"VARS";a:1:{s:1:"-";a:0:{}}}';
 return true;
 ?>

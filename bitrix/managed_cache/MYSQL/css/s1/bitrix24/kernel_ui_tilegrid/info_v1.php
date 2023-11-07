@@ -1,0 +1,1 @@
+<?php $filesInfo = ["/bitrix/js/ui/tilegrid/css/style.css" => "16992580905946",]; ?>

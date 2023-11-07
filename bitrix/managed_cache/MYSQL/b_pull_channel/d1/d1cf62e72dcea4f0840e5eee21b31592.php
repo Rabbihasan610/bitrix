@@ -1,7 +1,7 @@
 <?
 if($INCLUDE_FROM_CACHE!='Y')return false;
-$datecreate = '001699259536';
-$dateexpire = '001699302741';
-$ser_content = 'a:2:{s:7:"CONTENT";s:0:"";s:4:"VARS";a:5:{s:10:"CHANNEL_ID";s:32:"d17dd4bcc7489daedefbd2d01b926498";s:17:"CHANNEL_PUBLIC_ID";s:32:"53c0a0833d6a798b80daf04b3910ef3d";s:12:"CHANNEL_TYPE";s:7:"private";s:11:"DATE_CREATE";i:1699259536;s:7:"LAST_ID";i:0;}}';
+$datecreate = '001699332236';
+$dateexpire = '001699375441';
+$ser_content = 'a:2:{s:7:"CONTENT";s:0:"";s:4:"VARS";a:5:{s:10:"CHANNEL_ID";s:32:"307084e18d7524420f2c748537e70d95";s:17:"CHANNEL_PUBLIC_ID";s:32:"86594bc36a9aec4bb7f782cad501ea52";s:12:"CHANNEL_TYPE";s:7:"private";s:11:"DATE_CREATE";i:1699332236;s:7:"LAST_ID";i:0;}}';
 return true;
 ?>

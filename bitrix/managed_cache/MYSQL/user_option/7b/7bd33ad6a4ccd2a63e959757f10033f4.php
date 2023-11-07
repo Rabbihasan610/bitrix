@@ -1,7 +1,7 @@
 <?
 if($INCLUDE_FROM_CACHE!='Y')return false;
-$datecreate = '001699259529';
-$dateexpire = '001699263129';
-$ser_content = 'a:2:{s:7:"CONTENT";s:0:"";s:4:"VARS";a:0:{}}';
+$datecreate = '001699357322';
+$dateexpire = '001699360922';
+$ser_content = 'a:2:{s:7:"CONTENT";s:0:"";s:4:"VARS";a:3:{s:22:"crm_control_panel_menu";a:1:{s:8:"settings";s:1038:"{"crm_control_panel_menu_menu_crm_lead":{"sort":0,"isDisabled":true,"isPinned":false},"crm_control_panel_menu_menu_crm_deal":{"sort":1,"isDisabled":false,"isPinned":false},"crm_control_panel_menu_crm_catalogue":{"sort":2,"isDisabled":false,"isPinned":false},"crm_control_panel_menu_crm_clients":{"sort":3,"isDisabled":false,"isPinned":false},"crm_control_panel_menu_crm_sales":{"sort":4,"isDisabled":false,"isPinned":false},"crm_control_panel_menu_crm_analytics":{"sort":5,"isDisabled":false,"isPinned":false},"crm_control_panel_menu_crm_integrations":{"sort":6,"isDisabled":false,"isPinned":false},"crm_control_panel_menu_dynamic_list":{"sort":7,"isDisabled":false,"isPinned":false},"crm_control_panel_menu_crm_settings":{"sort":8,"isDisabled":false,"isPinned":false},"crm_control_panel_menu_menu_crm_recycle_bin":{"sort":9,"isDisabled":true,"isPinned":false},"crm_control_panel_menu_menu_crm_event":{"sort":10,"isDisabled":true,"isPinned":false},"crm_control_panel_menu_menu_crm_activity":{"sort":11,"isDisabled":true,"isPinned":false}}";}s:18:"group_panel_menu_1";a:1:{s:14:"expanded_lists";s:16:"{"view_all":"Y"}";}s:22:"top_menu_id_automation";a:2:{s:8:"settings";s:2:"{}";s:13:"firstPageLink";s:0:"";}}}';
 return true;
 ?>
